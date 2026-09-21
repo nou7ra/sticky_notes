@@ -64,6 +64,418 @@
         }
       },
       "response": []
+    },
+    {
+      "name": "forget_password",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"nouramohamed01097690991@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/forget_password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "forget_password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "send message",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"content\": \"hi\",\r\n    \"userId\": \"6aabcc132dce60cfd54291af\"\r\n \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/message/create-message",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "message",
+            "create-message"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "resend-otp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":  \"nouramohamed01097690991@gmail.com\"\r\n   \r\n   \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/resend-otp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "resend-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "confirmEmail",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"email\": \"nouramohamed01097690991@gmail.com\",\r\n    \"otp\": \"486030\"\r\n   \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/confirmEmail",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "confirmEmail"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get message",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJjYzEzMmRjZTYwY2ZkNTQyOTFhZiIsImlhdCI6MTc4OTg4NDIyOSwiZXhwIjoxNzg5ODg3ODI5LCJqdGkiOiIyNDI0MzNhMC02MjZjLTQxMGEtYjRjNi0yZjRmYTY1ZTAwY2YifQ.XKF7Ej1Xa-3FCN_E59jWBqbI2zJIDMvRxzOGLFdreEE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"content\": \"hi\",\r\n    \"userId\": \"6aabcc132dce60cfd54291af\"\r\n \r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/message/6aaf715e9650cac2644fb140",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "message",
+            "6aaf715e9650cac2644fb140"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-messages",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJjYzEzMmRjZTYwY2ZkNTQyOTFhZiIsImlhdCI6MTc4OTg4NDIyOSwiZXhwIjoxNzg5ODg3ODI5LCJqdGkiOiIyNDI0MzNhMC02MjZjLTQxMGEtYjRjNi0yZjRmYTY1ZTAwY2YifQ.XKF7Ej1Xa-3FCN_E59jWBqbI2zJIDMvRxzOGLFdreEE",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"content\": \"hi\",\r\n    \"userId\": \"6aabcc132dce60cfd54291af\"\r\n \r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/message/get-messages",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "message",
+            "get-messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get messages by userID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/users/6aabcc132dce60cfd54291af/messages",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "6aabcc132dce60cfd54291af",
+            "messages"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-message",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"content\": \"hellooooooooooo\",\r\n    \"userId\": \"6aabcc132dce60cfd54291af\"\r\n \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/message/create-message",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "message",
+            "create-message"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "reset_password",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"nouramohamed01097690991@gmail.com\",\r\n    \"code\": \"565143\",\r\n    \"password\": \"ahmedmo@5300\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/reset_password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "reset_password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "resend-otp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\": \"nouramohamed01097690991@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/resend-otp",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "resend-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "/update/password",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOWZhYmU4YjVjNDhkMDUxZTIyN2Q0NiIsImlhdCI6MTc4ODg0OTUwMiwiZXhwIjoxNzg4ODUzMTAyfQ.o-R8IpntVfYaO-cU5yhfCLJhpeVkQ6LFRSBeMYinTKM",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"oldPassword\": \"Rawan@123\",\r\n    \"newPassword\":\"Noura@123\",\r\n    \"cPassword\": \"Noura@123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/update/password",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "update",
+            "password"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update_profile",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOWU1Y2YxNTZmNDE1ZjY5ZGZhYjRjNSIsImlhdCI6MTc4ODg0NjY0MiwiZXhwIjoxNzg4ODUwMjQyfQ.n854Lt_wqzdJtt-FEKTIeRJ1yBy_dDvdhMpwBNYtjOg",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"age\": 66\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/update/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "update",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "refresh-token",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"authorization\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhOWU1Y2YxNTZmNDE1ZjY5ZGZhYjRjNSIsImlhdCI6MTc4ODc2MzQ4OCwiZXhwIjoxODIwMzIxMDg4fQ.ysbXczKaFZZ2CmvTn6DhmI3YBZUyEPsiW_55zQLuNwU\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/users/refresh-token",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "refresh-token"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get profile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/users/profile/6a9d9c0dc924098ba3c2aa10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "users",
+            "profile",
+            "6a9d9c0dc924098ba3c2aa10"
+          ]
+        }
+      },
+      "response": []
     }
   ]
 }
